@@ -1,7 +1,7 @@
 const path = require("path")
-const data = require("./data")
+const data = require("./src/data/pageData")
 
-exports.createPages = ({ actions }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   console.log('\n====================\n\n', data)
 
@@ -16,8 +16,27 @@ exports.createPages = ({ actions }) => {
     })
   })
 
-  /* createPage({
-    path: '/created',
-    component: path.resolve('./src/templates/Generic.js'),
-  }) */
+  const mdPages = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  
+  mdPages.data.allMarkdownRemark.edges.map(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: path.resolve('./src/templates/Markdown.js'),
+      context: {
+        slug: node.frontmatter.slug,
+      },
+    })
+  })
 }
