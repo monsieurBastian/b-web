@@ -1,0 +1,18 @@
+{
+  "name": "b-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:monsieurBastian/b-web.git",
+  "author": "Basti <bastian.gurtner@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby build && gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^4.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
