@@ -1,53 +1,9 @@
+@charset "utf-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&family=Open+Sans:wght@300;400;700;800&display=swap');
 
-$font-stack-h: 'Edu NSW ACT Foundation', cursive;
-$font-stack-txt: 'Open Sans', sans-serif;
-$primary-color: orange;
-$bg-color-light: antiquewhite;
-$txt-color-dark: darkslategrey;
+$primary: hsl(160, 100%, 50%);
+$input-shadow: none;
+$background: #fafafa;
 
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-body {
-  background: $bg-color-light;
-  color: $txt-color-dark;
-  font-family: $font-stack-txt;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4 {
-  font-family: $font-stack-h;
-}
-h5, h6 {
-  font-family: $font-stack-txt;
-}
-
-.container {
-  font-size: 18px;
-  line-height: 1.3;
-  margin: 0 auto;
-  max-width: 640px;
-  padding: 0 20px;
-  width: 100%;
-
-  h1 {
-    font-size: 48px;
-  }
-}
-
-.footer {
-  align-items: center;
-  background: rgb(20, 30, 30);
-  color: #ccc;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  min-height: 80px;
-}
+@import "../../node_modules/bulma/bulma.sass";

@@ -10,7 +10,7 @@ const Markdown = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{ markdownRemark.frontmatter.title }</h1>
+      <h1 className="text-3xl font-bold underline">{ markdownRemark.frontmatter.title }</h1>
 
       { featuredImage && (
         <Img 

@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Navigation from '../components/Navigation'
+
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="container">
-        { children }
-      </div>
+      <Navigation />
+      { children }
       <Footer />
     </>
   )
