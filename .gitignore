@@ -1,0 +1,6 @@
+.cache
+
+node_modules
+public
+
+.github/workflows/staged.old.yml

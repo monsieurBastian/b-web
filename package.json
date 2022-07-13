@@ -1,0 +1,25 @@
+{
+  "name": "b-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:monsieurBastian/b-web.git",
+  "author": "Basti <bastian.gurtner@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby build && gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^4.18.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^2.18.0",
+    "gatsby-plugin-sharp": "^4.18.0",
+    "gatsby-remark-images": "^6.18.1",
+    "gatsby-source-filesystem": "^4.18.0",
+    "gatsby-transformer-remark": "^5.18.0",
+    "gatsby-transformer-sharp": "^4.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
