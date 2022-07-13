@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
+import Layout from '../components/Layout'
 import Img from 'gatsby-image'
 
 const Markdown = ({ data }) => {
@@ -7,7 +9,7 @@ const Markdown = ({ data }) => {
   const { featuredImage } = markdownRemark.frontmatter
 
   return (
-    <div>
+    <Layout>
       <h1>{ markdownRemark.frontmatter.title }</h1>
 
       { featuredImage && (
@@ -21,7 +23,7 @@ const Markdown = ({ data }) => {
       <p>{ markdownRemark.frontmatter.description }</p>
       <p>put whatever you want</p>
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-    </div>
+    </Layout>
   )
 }
 
