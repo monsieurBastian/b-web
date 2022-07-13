@@ -14,6 +14,8 @@ const Markdown = ({ data }) => {
         <Img 
           fluid={ markdownRemark.frontmatter.featuredImage.childImageSharp.fluid } 
           alt="" 
+          loading="eager"
+          fadeIn="false"
         />
       )}
       <p>{ markdownRemark.frontmatter.description }</p>
@@ -34,7 +36,7 @@ export const pageQuery = graphql`
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
