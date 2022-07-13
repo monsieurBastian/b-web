@@ -3,7 +3,6 @@ const data = require("./src/data/pageData")
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  console.log('\n====================\n\n', data)
 
   data.forEach(( page ) => {
     createPage({
