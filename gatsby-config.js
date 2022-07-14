@@ -31,6 +31,19 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp'
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `B-WEB`,
+        short_name: `B-WEB`,
+        start_url: `/?source=pwa`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/mr-bastian.svg`,
+      },
+    },
+    'gatsby-plugin-offline'
   ]
 }
