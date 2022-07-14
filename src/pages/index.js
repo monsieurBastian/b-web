@@ -8,7 +8,7 @@ const IndexPage = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title defer={ false }>b-web</title>
+        <title defer="false">b-web</title>
         <link rel="canonical" href="https://b-web.ch" />
       </Helmet>
 

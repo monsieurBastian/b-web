@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <Link className="navbar-item" to="https://www.b-web.ch">
+        <Link className="navbar-item" to="/">
           <StaticImage
             src="../images/mr-bastian.svg"
             alt="MonsieurBastian"
@@ -35,7 +35,7 @@ const Navigation = () => {
       <div id="mainNavigation" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-start">
           <Link className="navbar-item" to="#">Blog</Link>
-          <Link className="navbar-item" to="#">About</Link>
+          <Link className="navbar-item" to="/about">About</Link>
         </div>
 
         <div className="navbar-end">
