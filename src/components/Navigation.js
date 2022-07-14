@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Navigation = () => {
   const [isActive, setisActive] = React.useState(false);
@@ -7,8 +8,12 @@ const Navigation = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <Link className="navbar-item" to="https://b-web.ch">
-          Bastian
+        <Link className="navbar-item" to="https://www.b-web.ch">
+          <StaticImage
+            src="../images/mr-bastian.svg"
+            alt="MonsieurBastian"
+            placeholder="blurred"
+          />
         </Link>
 
         <a
