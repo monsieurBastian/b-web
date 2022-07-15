@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Seo from './seo'
-import Navigation from './nav-old'
+import Navigation from './navigation'
 import Footer from './footer'
 
 import { ChakraProvider } from '@chakra-ui/react'

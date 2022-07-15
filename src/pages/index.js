@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Navigation from '../components/navigation'
+import Nav from '../components/main-navigation'
 
 import { 
   SkipNavLink, 
@@ -26,8 +27,8 @@ const IndexPage = () => {
   return (
     <ChakraProvider bgGradient='linear(to-br, gray.100, teal.50)'>
       <SkipNavLink>Skip to content</SkipNavLink>
-
-      <Navigation />
+      <Nav />
+      
       <Container maxW="container.md" p={ 5 }>
         <Flex h="100vh" py={ 5 }>
 
