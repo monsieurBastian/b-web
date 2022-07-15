@@ -21,7 +21,7 @@ const Markdown = ({ data }) => {
         />
       )}
       <p>{ markdownRemark.frontmatter.description }</p>
-      <p>put whatever you want</p>
+      <p>this is some generic content</p>
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     </Layout>
   )

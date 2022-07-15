@@ -7,7 +7,7 @@ const Generic = ({ pageContext }) => {
     <Layout>
       <h1>{ pageContext.title }</h1>
       <p>{ pageContext.description }</p>
-      <p>put whatever you want</p>
+      <p>this is some generic content</p>
     </Layout>
   )
 }
