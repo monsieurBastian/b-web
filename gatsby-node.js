@@ -7,7 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
   data.forEach(( page ) => {
     createPage({
       path: page.slug,
-      component: path.resolve('./src/templates/Generic.js'),
+      component: path.resolve('./src/templates/generic.js'),
       context: {
         title: page.title,
         description: page.description,
@@ -32,7 +32,7 @@ exports.createPages = async ({ actions, graphql }) => {
   mdPages.data.allMarkdownRemark.edges.map(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
-      component: path.resolve('./src/templates/Markdown.js'),
+      component: path.resolve('./src/templates/markdown.js'),
       context: {
         slug: node.frontmatter.slug,
       },
