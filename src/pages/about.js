@@ -1,18 +1,12 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const IndexPage = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title defer="false">About - B-web</title>
-        <link rel="canonical" href="https://b-web.ch" />
-      </Helmet>
-
-      <Layout>
+      <Layout pageTitle="About Bastian">
         <section className="section">
           <h1 className="title">About</h1>
           <h2 className="subtitle">Learn who I am</h2>
@@ -25,8 +19,8 @@ const IndexPage = () => {
                   <li>Anniversaire: 27.04</li>
                   <li>Taille: 184 cm</li>
                   <li>Poids: 83 kg</li>
-                  <li>Club: Ski-Club Lys Albeuve-Neirivue</li>
-                  <li>Coach: Pete aka #konacoaching</li>
+                  <li>Club: <Link to="https://www.sclys.ch/">Ski-Club Lys Albeuve-Neirivue</Link></li>
+                  <li>Coach: Pete aka <Link to="https://www.kona-coaching.com/">#konacoaching</Link></li>
                 </ul>
               </p>
 

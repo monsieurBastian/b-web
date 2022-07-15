@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: "Bastian, Frontend Designer and Developer",
+    titleTemplate: "%s | b-web.ch",
+    description: "Frontend Designer and Developer, helping bridging the gap between Marketing and Developers at SCOTT Sports"
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

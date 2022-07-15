@@ -1,18 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 const IndexPage = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title defer="false">b-web</title>
-        <link rel="canonical" href="https://b-web.ch" />
-      </Helmet>
-
-      <Layout>
+      <Layout pageTitle="Home of Bastian, Frontend Designer and Developer">
         <section className="hero is-medium">
           <div className="hero-body">
             <p className="subtitle">
