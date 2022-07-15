@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "Bastian, Frontend Designer and Developer",
     titleTemplate: "%s | b-web.ch",
-    description: "Frontend Designer and Developer, helping bridging the gap between Marketing and Developers at SCOTT Sports"
+    description: "Frontend Designer and Developer, helping bridging the gap between Marketing and Developers at SCOTT Sports",
+    url: "https://b-web.ch",
+    image: "/images/b-web-card.png",
+    twitterUsername: "@_tian",
   },
   plugins: [
     {
