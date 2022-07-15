@@ -4,13 +4,22 @@ import Seo from './seo'
 import Navigation from './navigation'
 import Footer from './footer'
 
+import { ChakraProvider } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+
 const Layout = ({ pageTitle, children }) => {
   return (
     <>
       <Seo pageTitle={ pageTitle } />
-      <Navigation />
-      { children }
-      <Footer />
+      <ChakraProvider>
+        <Navigation />
+        <Box p={ 8 }>
+          <Text fontSize="xl">
+            { children }
+          </Text>
+        </Box>
+        <Footer />
+      </ChakraProvider>
     </>
   )
 }

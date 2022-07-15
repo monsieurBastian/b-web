@@ -42,6 +42,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        resetCSS: true,
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `B-WEB`,
