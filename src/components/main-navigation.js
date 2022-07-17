@@ -1,11 +1,22 @@
-import React from 'react'
+import * as React from 'react'
 import { useState } from 'react'
 
 import {
-  Box, Flex, Text, Link, Button,
-  useDisclosure, useColorModeValue, useColorMode,
+  Box,
+  Flex,
+  Text,
+  Link,
+  Button,
+  //useDisclosure,
+  useColorModeValue,
+  useColorMode,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { 
+  HamburgerIcon,
+  CloseIcon, 
+  MoonIcon, 
+  SunIcon 
+} from '@chakra-ui/icons';
 
 const MenuItem = ({ children, isLast, to = '/' }) => {
   return (
@@ -36,7 +47,7 @@ const MenuItem = ({ children, isLast, to = '/' }) => {
 
 const Nav = ( props ) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  //const { isOpen, onOpen, onClose } = useDisclosure();
   const [show, setShow] = useState(false);
   const toggleMenu = () => setShow(!show);
 
@@ -81,8 +92,8 @@ const Nav = ( props ) => {
             pt={[4, 4, 0, 0]}
           >
             <MenuItem to="/">Home</MenuItem>
-            <MenuItem to="#blog">Blog</MenuItem>
-            <MenuItem to="#about">About</MenuItem>
+            <MenuItem to="/blog">Blog</MenuItem>
+            <MenuItem to="/about">About</MenuItem>
             <MenuItem to="#contact">Contact</MenuItem>
 
             <Button onClick={ toggleColorMode } isLast>

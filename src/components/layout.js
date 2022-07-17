@@ -1,26 +1,34 @@
-import React from 'react'
+import * as React from 'react'
 
 import Seo from './seo'
-import Navigation from './navigation'
-import Footer from './footer'
+import Nav from '../components/main-navigation'
 
-import { ChakraProvider } from '@chakra-ui/react'
-import { Box, Text } from '@chakra-ui/react'
+import { 
+  ChakraProvider,
+  Container,
+  Flex
+} from '@chakra-ui/react'
+import {
+  SkipNavLink,
+  SkipNavContent,
+} from '@chakra-ui/skip-nav'
+
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <>
+    <ChakraProvider bgGradient='linear(to-br, gray.100, teal.50)'>
+      <SkipNavLink>Skip to content</SkipNavLink>
       <Seo pageTitle={ pageTitle } />
-      <ChakraProvider>
-        <Navigation />
-        <Box p={ 8 }>
-          <Text fontSize="xl">
-            { children }
-          </Text>
-        </Box>
-        <Footer />
-      </ChakraProvider>
-    </>
+      
+      <Nav />
+
+      <Container maxW="container.md" p={ 5 }>
+        <Flex h="100vh" py={ 5 }>
+          <SkipNavContent />
+          { children }
+        </Flex>
+      </Container>
+    </ChakraProvider>
   )
 }
 
