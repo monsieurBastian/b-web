@@ -45,12 +45,6 @@ const IndexPage = () => {
               fontWeight='extrabold'>
               A Frontend and Multimedia Design Team Lead at SCOTT Sports, crafting web experiences and help bridging the gap between Marketing and Developers.
             </Text>
-            <Button 
-              variant="link" 
-              colorScheme="black"
-              onClick={ toggleColorMode }>
-              Try changing the theme.
-            </Button>
           </VStack>
         </Flex>
       </Container>
