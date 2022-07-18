@@ -33,9 +33,12 @@ const BlogPage = ({ data }) => {
 
 export const queryPosts = graphql`
   query MyQuery {
-    allFile(filter: {sourceInstanceName: { eq: "blog" }}) {
+    allMdx {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
       }
     }
   }

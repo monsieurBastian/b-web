@@ -1,5 +1,6 @@
 ---
 title: Second Page
+date: 2022-07-17
 description: Should I really say i?!
 slug: /second-markdown
 ---

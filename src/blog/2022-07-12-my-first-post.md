@@ -1,5 +1,6 @@
 ---
 title: This would be my frist Gatsby blog post.
+date: 2022-07-16
 description: Would you like to read this? It would be a lot of fun.
 slug: /first-markdown
 featuredImage: ../images/javier-miranda-6Pou6SeJ6cY-unsplash.jpg
