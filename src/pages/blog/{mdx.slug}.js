@@ -2,14 +2,14 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 import { 
   VStack,
   Heading,
   Text,
 } from '@chakra-ui/react'
 
-const Markdown = ({ data }) => {
+const BlogPostPage = ({ data }) => {
   return (
     <Layout pageTitle={ data.mdx.frontmatter.title }>
       <VStack w="full" h="full" p={ 10 } spacing={ 10 } alignItems="flex-start">
@@ -29,8 +29,8 @@ const Markdown = ({ data }) => {
   )
 }
 
-export const markdownQuery = graphql`
-  query mdQuery($id: String) {
+export const queryPost = graphql`
+  query QueryPost($id: String) {
     mdx(
       id: {eq: $id}
     ) {
@@ -48,4 +48,4 @@ export const markdownQuery = graphql`
   }
 `
 
-export default Markdown
+export default BlogPostPage

@@ -15,9 +15,12 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  const mdPages = await graphql(`
+/*   const mdxPages = await graphql(`
     query {
-      allMarkdownRemark {
+      allMdx (
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+        ) {
         edges {
           node {
             frontmatter {
@@ -29,7 +32,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
   
-  mdPages.data.allMarkdownRemark.edges.map(({ node }) => {
+  mdxPages.data.allMdx.edges.map(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
       component: path.resolve('./src/templates/markdown.js'),
@@ -37,5 +40,5 @@ exports.createPages = async ({ actions, graphql }) => {
         slug: node.frontmatter.slug,
       },
     })
-  })
+  }) */
 }

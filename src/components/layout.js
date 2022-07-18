@@ -17,9 +17,9 @@ import {
 const Layout = ({ pageTitle, children }) => {
   return (
     <ChakraProvider bgGradient='linear(to-br, gray.100, teal.50)'>
-      <SkipNavLink>Skip to content</SkipNavLink>
       <Seo pageTitle={ pageTitle } />
-      
+
+      <SkipNavLink>Skip to content</SkipNavLink>
       <Nav />
 
       <Container maxW="container.md" p={ 5 }>
