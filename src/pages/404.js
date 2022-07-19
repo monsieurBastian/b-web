@@ -1,12 +1,22 @@
-import React from 'react'
+import * as React from 'react'
 
-const NotFound = () => {
+import Layout from '../components/layout'
+import { 
+  Heading,
+  Text
+} from '@chakra-ui/react'
+
+const NotFoundPage = () => {
   return (
-    <div>
-      <h1>404 - Not Found</h1>
-      <p>This is not a robot speaking</p>
-    </div>
+    <Layout pageTitle="Home Page">
+
+      <Heading as='h1'>
+        Snap! Something is missing here.
+      </Heading>
+
+      <Text>It happens sometimes</Text>
+    </Layout>
   )
 }
 
-export default NotFound
+export default NotFoundPage

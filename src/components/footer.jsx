@@ -5,13 +5,13 @@ import { Box, Container } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Footer>
+    <footer>
       <Box paddingY={ 2 }>
         <Container maxW="container.md">
           All right reserved - 2022 - <Link to="/">Bastian</Link>.
         </Container>
       </Box>
-    </Footer>
+    </footer>
   )
 }
 

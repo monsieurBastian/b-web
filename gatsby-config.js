@@ -35,20 +35,6 @@ module.exports = {
         extensions: ['.mdx', '.md']
       }
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 800,
-              withWebp: true,
-            }
-          }
-        ]
-      }
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
@@ -77,6 +63,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       optionx: {
         plugin: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              withWebp: true,
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

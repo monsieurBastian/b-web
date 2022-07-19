@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types';
 
 import { Container } from '@chakra-ui/react'
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav'
@@ -27,7 +26,3 @@ const Layout = ({ pageTitle, children }) => {
 }
 
 export default Layout
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};

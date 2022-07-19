@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import Layout from '../components/layout'
 import { 
-  VStack,
   Heading,
   Text
 } from '@chakra-ui/react'
@@ -10,16 +9,14 @@ import {
 const AboutPage = () => {
   return (
     <Layout pageTitle="About me">
-      <VStack w="full" h="full" p={ 10 } spacing={ 10 } alignItems="flex-start">
-        <Heading as='h1'>
-          About me
-        </Heading>
+      <Heading as='h1'>
+        About me
+      </Heading>
 
-        <Text>
-          It's me, Bastian! 
-          and this is my story.
-        </Text>
-      </VStack>
+      <Text>
+        It's me, Bastian! 
+        and this is my story.
+      </Text>
     </Layout>
   )
 }
