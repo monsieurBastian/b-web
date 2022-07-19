@@ -7,7 +7,6 @@ import {
   Text,
   Link,
   Button,
-  //useDisclosure,
   useColorModeValue,
   useColorMode,
 } from '@chakra-ui/react';
@@ -47,7 +46,6 @@ const MenuItem = ({ children, isLast, to = '/' }) => {
 
 const Nav = ( props ) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  //const { isOpen, onOpen, onClose } = useDisclosure();
   const [show, setShow] = useState(false);
   const toggleMenu = () => setShow(!show);
 

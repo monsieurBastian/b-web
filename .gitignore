@@ -1,4 +1,7 @@
 .cache/
 
 node_modules/
-public
+public/
+
+index.html
+css/

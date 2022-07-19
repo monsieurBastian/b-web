@@ -1,35 +1,33 @@
 import * as React from 'react'
+import PropTypes from 'prop-types';
+
+import { Container } from '@chakra-ui/react'
+import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav'
 
 import Seo from './seo'
-import Nav from '../components/main-navigation'
-
-import { 
-  ChakraProvider,
-  Container,
-  Flex
-} from '@chakra-ui/react'
-import {
-  SkipNavLink,
-  SkipNavContent,
-} from '@chakra-ui/skip-nav'
-
+import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <ChakraProvider bgGradient='linear(to-br, gray.100, teal.50)'>
+    <>
       <Seo pageTitle={ pageTitle } />
 
       <SkipNavLink>Skip to content</SkipNavLink>
-      <Nav />
+      <Header />
 
-      <Container maxW="container.md" p={ 5 }>
-        <Flex h="100vh" py={ 5 }>
-          <SkipNavContent />
-          { children }
-        </Flex>
+      <Container maxW="container.md" paddingY={ 5 } marginBottom="12">
+        <SkipNavContent />
+        { children }
       </Container>
-    </ChakraProvider>
+
+      <Footer />
+    </>
   )
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Layout
