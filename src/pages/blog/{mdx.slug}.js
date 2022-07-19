@@ -11,7 +11,7 @@ import {
 
 const BlogPostPage = ({ data }) => {
   return (
-    <Layout pageTitle={ data.mdx.frontmatter.title }>
+    <Layout pageTitle="this is the page title">
       <VStack w="full" h="full" p={ 10 } spacing={ 10 } alignItems="flex-start">
 
         <Heading as='h1'>
@@ -19,9 +19,10 @@ const BlogPostPage = ({ data }) => {
         </Heading>
         <Text fontSize='sm'>Posted: { data.mdx.frontmatter.date }</Text>
         <Text fontSize='md'>
-          <MDXRenderer>
+          Hello
+{/*           <MDXRenderer>
             { data.mdx.body }
-          </MDXRenderer>
+          </MDXRenderer> */}
         </Text>
 
       </VStack>

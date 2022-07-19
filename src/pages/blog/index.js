@@ -18,21 +18,21 @@ const BlogPage = ({ data }) => {
           My humble blog Posts
         </Heading>
 
-            <UnorderedList spacing={ 3 } noicon>
-              {
-                data.allMdx.nodes.map((node) => (
-                  <ListItem key={ node.id }>
-                    <Heading as='h2' size='md'>
-                      <Link to={ `/blog/${ node.slug }` }>
-                        { node.frontmatter.title }
-                      </Link>
-                    </Heading>
-                    <Text fontSize='sm'>Posted: { node.frontmatter.date } / { node.slug }</Text>
-                  </ListItem>
-                ))
-              }
-            </UnorderedList>
-            </VStack>
+        <UnorderedList spacing={ 3 } noicon>
+          {
+            data.allMdx.nodes.map((node) => (
+              <ListItem key={ node.id }>
+                <Heading as='h2' size='md'>
+                  <Link to={ `/blog/${ node.slug }` }>
+                    { node.frontmatter.title }
+                  </Link>
+                </Heading>
+                <Text fontSize='sm'>Posted: { node.frontmatter.date } / { node.slug }</Text>
+              </ListItem>
+            ))
+          }
+        </UnorderedList>
+      </VStack>
     </Layout>
   )
 }

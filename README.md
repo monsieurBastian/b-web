@@ -14,11 +14,11 @@ The idea is to:
 
 Create a basic html page
 
--> Add Gatsby
+Add Gatsby (from scratch)
 
-Make it a blog
+Add styles (Started with Bulma, ended with Chakra)
 
-Add styles
+-> Make it a blog
 
 Add a CMS (drupal)
 
