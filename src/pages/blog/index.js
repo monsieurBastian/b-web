@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../../components/layout'
 import { 
   VStack,
+  Box,
   Heading,
   Text,
   UnorderedList,
@@ -28,6 +30,11 @@ const BlogPage = ({ data }) => {
                   </Link>
                 </Heading>
                 <Text fontSize='sm'>Posted: { node.frontmatter.date } / { node.slug }</Text>
+                <Box>
+                  <MDXRenderer>
+                    { node.body }
+                  </MDXRenderer>
+                </Box>
               </ListItem>
             ))
           }
@@ -45,11 +52,12 @@ export const queryPosts = graphql`
     ) {
       nodes {
         frontmatter {
-          date(formatString: "DD MMMM YYYY")
+          date(formatString: "MMMM DD, YYYY")
           title
         }
         id
         slug
+        body
       }
     }
   }
