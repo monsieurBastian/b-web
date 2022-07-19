@@ -28,7 +28,7 @@ const Seo = ({ pageTitle, title, description, image, article }) => {
     <Helmet title={ seo.title } titleTemplate={ titleTemplate }>
       <meta charSet="utf-8" />
 
-      <title>{ pageTitle }</title>
+      <title>{ seo.title }</title>
       <link rel="canonical" href="https://b-web.ch" />
 
       <meta name="description" content={seo.description} />
