@@ -29,7 +29,12 @@ module.exports = {
         path: `${ __dirname }/src/images`
       }
     },
-    'gatsby-plugin-mdx',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md']
+      }
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -53,7 +58,6 @@ module.exports = {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
         resetCSS: true,
-        isUsingColorMode: true,
       }
     },
     {
