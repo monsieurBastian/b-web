@@ -6,21 +6,21 @@ import Blog from '../../components/blog'
 import { Heading } from '@chakra-ui/react'
 
 const BlogPage = ({ data }) => {
-  const { blogs } = data.allMdx
-
   return (
     <Layout pageTitle="My Blog">
       <Heading as='h1'>
         My humble blog Posts
       </Heading>
 
-      { blogs.map(blog => 
-        <Blog
-          link={ blog.slug } 
-          title={ blog.frontmatter.title } 
-          date={ blog.frontmatter.date }
-          excerpt={ blog.excerpt }
-        />
+      { data.allMdx.nodes.map(node => 
+        <>
+          <Blog
+            link={ node.slug } 
+            title={ node.frontmatter.title } 
+            date={ node.frontmatter.date }
+            excerpt={ node.excerpt }
+          />
+        </>
       ) }
     </Layout>
   )
@@ -29,10 +29,10 @@ const BlogPage = ({ data }) => {
 export const query = graphql`
   query BlogList {
     allMdx(
-      filter: {fileAbsolutePath: { regex : "\/blog/" }}, 
+      filter: {fileAbsolutePath: { regex : "\/blogs/" }}, 
       sort: {fields: frontmatter___date, order: DESC}
     ) {
-      blogs: nodes {
+      nodes {
         excerpt
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
@@ -41,6 +41,7 @@ export const query = graphql`
         id
         slug
         timeToRead
+        body
       }
     }
   }
