@@ -29,12 +29,7 @@ module.exports = {
         path: `${ __dirname }/src/images`
       }
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-      },
-    },
+    'gatsby-plugin-mdx',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -72,6 +67,43 @@ module.exports = {
         icon: `src/images/b-web-icon.png`,
       },
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-transformer-remark`,
+      optionx: {
+        plugin: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {}
+            },
+          },
+        ],
+      },
+    },
   ]
 }
