@@ -12,14 +12,14 @@ Father of 3 who likes Sport (swimming, bike, running), cooking and photography. 
 
 The idea is to:
 
-Create a basic html page
-
-Add Gatsby (from scratch)
-
-Add styles (Started with Bulma, ended with Chakra)
-
--> Make it a blog
-
-Add a CMS (drupal)
+[v] Create a basic html page
+[v] Add Gatsby (Gatsby Tutorial)
+[v] Add styles (Started with Bulma, ended with Chakra)
+[v] Make it a blog
+[ ] Cover images for blogs
+[ ] Previous/next navigation for Blogs
+[ ] SEO component with Helmet
+[ ] Replace Chakra with Bootstrap ?
+[ ] Add a CMS (drupal)
 
 Everything nicely auto deploying from Gatsby to my personal website with Github actions
