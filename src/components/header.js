@@ -52,10 +52,10 @@ const Nav = ( props ) => {
   return (
     <Box 
       bg={ useColorModeValue('gray.100', 'gray.900') } 
-      px={ 4} 
+      px={ 4 }
+      mb={ 10 }
     >
       <Flex 
-        mb={ 8 }
         p={ 4 }
         w="100%"
         as="nav"

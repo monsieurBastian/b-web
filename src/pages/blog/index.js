@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 
 import Layout from '../../components/layout'
 import Blog from '../../components/blog'
-import { Heading } from '@chakra-ui/react'
+import PageHeader from '../../components/page-header'
 
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog">
-      <Heading as='h1'>
-        My humble blog Posts
-      </Heading>
+      <PageHeader>
+        Readings
+      </PageHeader>
 
       { data.allMdx.nodes.map(node => 
         <>
