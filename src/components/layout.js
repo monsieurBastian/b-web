@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ChakraProvider, Container, Flex } from '@chakra-ui/react'
+import { ChakraProvider, Container } from '@chakra-ui/react'
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav'
 
 import theme from '../theme/new-fonts'

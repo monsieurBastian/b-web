@@ -32,13 +32,32 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: ['.mdx', '.md']
+        extensions: ['.mdx', '.md'],
+        options: {
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1200,
+              },
+            },
+          ],
+        },
       }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 70,
+          formats: ['auto', 'webp', 'avif'],
+          placeholder: 'blurred',
+        },
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: '@chakra-ui/gatsby-plugin',

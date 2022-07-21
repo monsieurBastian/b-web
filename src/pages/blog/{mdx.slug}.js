@@ -18,7 +18,12 @@ const chakraUiComponents = {
 }
 
 const MarkdownPage = ({ data }) => {
-  const { frontmatter, body, timeToRead } = data.mdx
+  const { 
+    frontmatter, 
+    body, 
+    timeToRead,
+    embeddedImagesRemote
+   } = data.mdx
 
   return (
     <Layout pageTitle="this is the page title">
@@ -39,7 +44,10 @@ const MarkdownPage = ({ data }) => {
 
       <Box paddingY="8">
         <MDXProvider components={ chakraUiComponents }>
-          <MDXRenderer>
+          <MDXRenderer
+            remoteImages={ embeddedImagesRemote }
+            localImages={ frontmatter.embeddedImagesLocal }
+          >
             { body }
           </MDXRenderer>
         </MDXProvider>
@@ -54,10 +62,20 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
       }
       body
       slug
       timeToRead
+      embeddedImagesRemote {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
     }
   }
 `
