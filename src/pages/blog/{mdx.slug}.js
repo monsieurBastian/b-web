@@ -57,10 +57,10 @@ const MarkdownPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query ($id: String!) {
+  query MyPageQuery($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         title
         embeddedImagesLocal {
           childImageSharp {

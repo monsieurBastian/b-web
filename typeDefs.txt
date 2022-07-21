@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-07-21T12:15:17.961Z ###
+### Type definitions saved at 2022-07-21T12:56:09.580Z ###
 
 enum RemoteFileFit {
   COVER
@@ -353,6 +353,11 @@ type Mdx implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"
 
 type Frontmatter {
   title: String!
+  date: Date
+  tags: String!
+  description: String!
+  slug: String!
+  cover: [File] @fileByRelativePath
   embeddedImagesLocal: [File] @fileByRelativePath
   embeddedImagesRemote: [String]
 }

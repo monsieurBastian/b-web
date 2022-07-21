@@ -1,23 +1,26 @@
 const { createRemoteFileNode } = require('gatsby-source-filesystem');
 
-exports.createSchemaCustomization = ({ actions, schema }) => {
-  const { createTypes, printTypeDefinitions } = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
 
   createTypes(`
     type Mdx implements Node {
-      frontmatter: Frontmatter
+      frontmatter: MdxFrontmatter
       embeddedImagesRemote: [File] @link(from: "fields.embeddedImagesRemote")
     }
     
-    type Frontmatter @dontInfer {
+    type MdxFrontmatter @dontInfer {
       title: String!
+      date: Date
+      tags: String!
+      description: String!
+      slug: String!
+      cover: [File] @fileByRelativePath
       embeddedImagesLocal: [File] @fileByRelativePath
       embeddedImagesRemote: [String]
     }
-    `);
-
-  printTypeDefinitions({ path: './typeDefs.txt' });
-};
+  `)
+}
 
 exports.onCreateNode = async ({
   node,

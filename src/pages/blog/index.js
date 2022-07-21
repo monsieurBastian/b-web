@@ -35,7 +35,7 @@ export const query = graphql`
       nodes {
         excerpt
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date
           title
         }
         id
