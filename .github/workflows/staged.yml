@@ -1,19 +1,39 @@
+name: 🚀 Deploy STAGED website on push
+
 on:
   push:
     branches:
       - staged
-name: 🚀 Deploy STAGED website on push
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build-and-deploy:
+    name: 🎉 Build and deploy Gatsby site
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+    - name: 🚚 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '17.x'
+
+    - name: Install Project Dependencies
+      run: npm i --legacy-peer-deps
+
+    - name: Install Gatsby CLI
+      run: npm install -g gatsby-cli
+    
+    - name: Build
+      run: gatsby build
+    
+    - name: Verify build
+      run: ls -la public
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
+        local-dir: ./public/
         server: qb1jc.ftp.infomaniak.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
