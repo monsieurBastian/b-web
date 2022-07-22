@@ -127,6 +127,6 @@ module.exports = {
         baseUrl: `https://www.b-web.ch/`,
         apiBase: `jsonapi` // or api
       }
-    }
+    },
   ]
 }
