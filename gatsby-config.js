@@ -122,10 +122,21 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-drupal`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        baseUrl: `https://www.b-web.ch/`,
-        apiBase: `jsonapi` // or api
+        trackingIds: [
+          "G-TPMFQYG11J"
+        ],
+        gtagConfig: {
+          optimize_id: 'OPT_CONTAINER_ID',
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ['/preview/**']
+        }
       }
     }
   ]
