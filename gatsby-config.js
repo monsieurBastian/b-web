@@ -3,8 +3,9 @@ module.exports = {
     title: "Bastian, Frontend Designer and Developer",
     titleTemplate: "%s | b-web.ch",
     description: "Frontend Designer and Developer, helping bridging the gap between Marketing and Developers at SCOTT Sports",
-    url: "https://b-web.ch",
-    image: "/images/b-web-card.png",
+    keywords: "frontend, ux, ui, blog, portfolio",
+    siteUrl: "https://b-web.ch",
+    image: "/b-web-card.png",
     twitterUsername: "@_tian",
   },
   plugins: [
@@ -33,16 +34,14 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        options: {
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1200,
-              },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-plugin-image`,
+            options: {
+              maxWidth: 1200,
             },
-          ],
-        },
+          },
+        ],
       }
     },
     'gatsby-plugin-react-helmet',
