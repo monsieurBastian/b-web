@@ -120,13 +120,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-source-drupal`,
-      options: {
-        baseUrl: `https://www.b-web.ch/`,
-        apiBase: `jsonapi` // or api
-      }
     }
   ]
 }
