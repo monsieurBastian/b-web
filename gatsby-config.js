@@ -128,16 +128,15 @@ module.exports = {
         trackingIds: [
           "G-TPMFQYG11J", // Google Analytics / GA
         ],
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
         },
-      },
+        pluginConfig: {
+          head: true,
+          exclude: ['/preview/**']
+        }
+      }
     },
   ]
 }
