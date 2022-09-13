@@ -127,12 +127,15 @@ module.exports = {
         trackingIds: [
           "G-TPMFQYG11J"
         ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
         pluginConfig: {
-          head: false,
-          respectDNT: true,
+          head: true,
           exclude: ['/preview/**']
         }
       }
-    }
+    },
   ]
 }
