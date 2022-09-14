@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Layout from '../components/layout'
+import LayoutStoryblok from '../components/layout-storyblok'
 import { 
   Heading,
   Text
@@ -8,14 +8,14 @@ import {
 
 const NotFoundPage = () => {
   return (
-    <Layout pageTitle="Home Page">
+    <LayoutStoryblok pageTitle="Home Page">
 
       <Heading as='h1'>
         Snap! Something is missing here.
       </Heading>
 
       <Text>It happens sometimes</Text>
-    </Layout>
+    </LayoutStoryblok>
   )
 }
 
