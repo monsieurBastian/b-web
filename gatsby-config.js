@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${ process.env.NODE_ENV }`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Bastian, Frontend Designer and Developer",
@@ -124,9 +128,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-TPMFQYG11J", // Google Analytics / GA
+          `G-TPMFQYG11J`,
         ],
         gtagConfig: {
           anonymize_ip: true,
@@ -134,8 +137,16 @@ module.exports = {
         },
         pluginConfig: {
           head: true,
-          exclude: ['/preview/**']
-        }
+          exclude: ['/preview/**'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-storyblok`,
+      options: {
+        accessToken: `EElM201MYvrmzoizNrwrbAtt`,
+        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
+        localAssets: true,
       }
     },
   ]
