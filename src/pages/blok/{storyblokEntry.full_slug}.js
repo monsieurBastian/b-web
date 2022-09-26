@@ -13,9 +13,9 @@ const StoryblokEntry = ({ data }) => {
 
   return (
     <LayoutStoryblok>
-      <div {...storyblokEditable(story.content)}>
-        <h1>{story.name}</h1>
-        {components}
+      <div { ...storyblokEditable(story.content) }>
+        <h1>{ story.name }</h1>
+        { components }
       </div>
     </LayoutStoryblok>
   )
